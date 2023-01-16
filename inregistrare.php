@@ -1,0 +1,160 @@
+<?php 
+ 
+    include 'php/conexiune.php';
+	include 'php/inreg.php';
+
+                
+	
+ ?> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style1.css"> 
+	<style>
+.reg-body{
+    width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 3px;
+    padding: 40px 25px;
+    margin-top: 100px;
+	background-color: #ffffff;
+
+} 
+.reg-body .form-group{
+    margin-bottom: 16px;
+    
+    
+}
+.reg-body label{
+    width: 145px;
+   margin-right: 20px;
+
+   
+}
+.reg-body .custom{
+    width: 350px;
+	
+}
+
+.reg-body .submit .change{
+    background: #3f555c;
+    border:  none;
+    color: #fff;
+    margin-left: 30px;
+}
+/* formatare text */
+.form-inline label{
+    text-align: right;
+    display: block;
+    font-weight: bold;
+	
+} 
+.form-inline label{
+    text-align: right;
+    display: block;
+    font-weight: bold;
+} 
+/*pozitionare buton */
+.reg-body .submit{
+    margin-top: 25px;
+    margin-left: 200px;
+    
+}
+
+</style>
+</head>
+<body>
+    
+    <div class="m-4">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="admin.php" class="nav-link">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="autentificare.php" class="nav-link">Autentificare</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+</div>
+
+	<div class="registration" >
+		<div class="reg-wrapper" >
+			
+			<div class="reg-body">
+				
+				<form action="" class="form-inline" method="post">
+				<?php if(isset($s_msg)):?>
+                    <span class="success"> <?php echo $s_msg; ?></span>
+                <?php endif ?>
+                <?php if(isset($error_m)):?> 
+					<span class="error"> <?php echo $error_m; ?></span>
+				<?php endif ?>
+				<div class="form-group">
+					 	<label for="nume" class="text-right">Nume <span>*</span></label>
+                        <input type="text" class="form-control custom"  pattern="[A-Z]{1}[a-z]*[[-]*[A-Z]{1}[a-z]*]*" required title="Nume invalid.Numele trebuie sa inceapa cu litera mare si sa contina doar litere"placeholder="" name="nume"/>    
+				   </div> 
+				   
+				   <?php if(isset($error_n)):?> 
+                     <span class="error"> <?php echo $error_n; ?></span>
+                      <?php endif ?>
+                    <div class="form-group">
+                    <label for="utilizator" class="text-right">Nume utilizator <span>*</span></label>
+						<br><input type="text" class="form-control custom" placeholder="" name="utilizator" />
+                    </div>
+                     <?php if(isset($error_ua)):?> 
+                     <span class="error"> <?php echo $error_ua; ?></span>
+                      <?php endif ?>
+                      <?php if(isset($error_unume)):?> 
+                     <span class="error"> <?php echo $error_unume; ?></span>
+                      <?php endif ?>
+                    <div class="form-group">
+                   <label for="parola" class="text-right">Parola <span>*</span></label>
+					<br><input type="password" class="form-control custom" placeholder="" name="parola"/>
+                    </div>
+					<?php if(isset($error_pw)):?> 
+                     <span class="error"> <?php echo $error_pw; ?></span>
+                      <?php endif ?>         
+                    <div class="form-group">
+                   <label for="email" class="text-right">Email <span>*</span></label>
+				   <br><input type="text" class="form-control custom" placeholder="" name="email"/>
+                    </div>
+                    <?php if(isset($e_msg)):?> 
+                    <span class="error"><?php echo $e_msg; ?> </span>
+                    <?php endif ?>
+                    <?php if(isset($error_email)):?> 
+                    <span class="error"><?php echo $error_email; ?> </span>
+                    <?php endif ?>
+                    <div class="form-group">
+                    <label for="telefon" class="text-right">Numar telefon <span>*</span></label>
+					<br><input type="text" class="form-control custom" placeholder="" name="telefon"/>
+                    </div>
+                    <?php if(isset($error_telefon)):?> 
+                    <span class="error"><?php echo $error_telefon; ?></span>
+                      <?php endif ?>
+					 <?php if(isset($error_t)):?> 
+                     <span class="error"> <?php echo $error_t; ?></span>
+                     <?php endif ?>
+                    <div class="submit">
+                    <input type="submit" value="Inregistrare" name="submit" > <br>
+					 
+                    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+    
+
+	
+</body>
+</html>

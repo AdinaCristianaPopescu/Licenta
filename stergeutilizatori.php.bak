@@ -1,0 +1,25 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["utilizator"])) {
+        ?>
+        <script type="text/javascript">
+            window.location="admin.php";
+        </script>
+        <?php
+    }
+
+    include 'php/conexiune.php';
+    if (isset($_GET["nume"])) {
+        $nume = $_GET["nume"];
+        mysqli_query($link, "delete from utilizatori where nume=$nume");
+
+        ?>
+        <script type="text/javascript">
+            window.location="utilizatori.php";
+        </script>
+        <?php
+    }
+
+
+
+?>
