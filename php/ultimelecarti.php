@@ -1,0 +1,17 @@
+<?php
+
+	function selectultimelecarti($link){
+		$row = array();
+		$query = "SELECT ISBN, imgcarte FROM carti ORDER BY titlu DESC";
+		$result = mysqli_query($link, $query);
+		if(!$result){
+		    echo "Can't retrieve data " . mysqli_error($link);
+		    exit;
+		}
+		for($i = 0; $i < 4; $i++){
+			array_push($row, mysqli_fetch_assoc($result));
+		}
+		return $row;
+	}
+
+?>
