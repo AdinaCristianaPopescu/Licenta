@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image:  url(https://raw.githubusercontent.com/PopescuAdina/css/main/bgdash.jpg);
+    background-position: top center; 
+    background-size: 980px 559px;
+    overflow: hidden;
+}
+
+.main-content .left-sidebar{
+	margin-top: 10%;
+    width: 11.7%;
+    height: 100%;
+    background: #F8F9FA;
+    float: left;
+}
+.main-content .left-sidebar .p-title{
+    width: 100%;
+    padding: 13px;
+    padding-left: 20px;
+    background: #000000;
+    border-bottom: 1px solid #ddd;
+}
+.main-content .p-title a{
+    text-decoration: none;
+    color:#000000;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.main-content .p-title a i{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+}
+.main-content .p-title a span{
+    margin-left: 10px;
+}
+.main-content .left-sidebar .profile{
+    width: 100%;
+    padding: 20px;
+    margin-top: 0;
+    padding-top: 0;
+    
+}
+
+.main-content .left-sidebar .profile .profile-info{
+    width: 60%;
+    float: left;
+    color: #000000;
+    
+}
+.main-content .left-sidebar .profile .profile-info h2{
+    font-size: 23px;
+}
+
+.sidebar-menu{
+    color:#000000;
+    width: 100%;
+    padding-top: 60px;
+    padding-left: 0;
+}
+.sidebar-menu h3{
+    margin-left: 20px;
+    font-size: 24px;
+}
+.sidebar-menu .border{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.sidebar-menu ul li a{
+    text-decoration: none;
+    color:#000000;
+    width: 270px;
+    padding: 15px 20px;
+    font-size: 13px;
+    display: block;
+    text-transform: capitalize;
+    transition: all .5s ease;
+	list-style-type: none;
+}
+.sidebar-menu ul li a:hover{
+    background: #333;
+    color: #fff;
+list-style-type: none;
+}
+.sidebar-menu ul{
+    padding-left: 0;
+    list-style-type: none;
+   
+}
+.sidebar-menu ul li{
+   
+     list-style-type: none;
+       
+}
+.sidebar-menu  ul li a i{
+    margin-right: 10px;
+    font-size: smaller;
+}
+.sidebar-menu ul li a span{
+    float: right;
+    
+}
+.sidebar-menu .menus1,
+.sidebar-menu .menus2,
+.sidebar-menu .menus3,
+.sidebar-menu .menus4,
+.sidebar-menu .menu5{
+    display: none;
+}
+.sidebar-menu .menus1 li,
+.sidebar-menu .menus2 li,
+.sidebar-menu .menus3 li,
+.sidebar-menu .menus4 li{
+    margin-left: 60px;
+
+    
+
+}
+.sidebar-menu .menus1 li a,
+.sidebar-menu .menus2 li a,
+.sidebar-menu .menus3 li a,
+.sidebar-menu .menus4 li a{
+    padding: 0;
+    padding: 10px;
+    padding-left: 0;
+}
+.sidebar-menu .menus1 li a:hover,
+.sidebar-menu .menus2 li a:hover,
+.sidebar-menu .menus3 li a:hover,
+.sidebar-menu .menus4 li a:hover{
+    background: 0;
+    color: #fff;
+}
